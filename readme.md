@@ -1,9 +1,25 @@
-package me.legend;
+# SRE
 
-import me.legend.GraphicsManager.GraphicsManager;
-import me.legend.Interfaces.KeypressListener;
-import me.legend.Interfaces.Renderable;
+SRE is a 2d graphics library for Java.
 
+## Installation
+
+Head over to the releases tab and download the latest jar. Once that's done, add this to your pom.xml
+
+
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>me.legend</groupId>
+            <artifactId>SRE</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependency>
+```
+
+## Usage
+Basic application example, with drawing a single line in the through the center
+```java
 public class Main {
     public static void main(String... args){
         Application application = new Application(1280, 720);
@@ -27,3 +43,14 @@ class RenderLoop implements Renderable {
         graphics.drawLine(0, 400, 1280, 400);
     }
 }
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+#### Notes
+```
+// Coordinate System
+(-1, -1) : Top Left
+(1, 1) : Bottom Right
+```
